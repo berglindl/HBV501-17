@@ -7,10 +7,20 @@
 	<body>
 		<h1>Grade Progress</h1>
 		<br>
-		<img src="elmo.gif" alt="Elmo in hell" style="width:440px; height:300px;">
+		<section class="classes">
+			<div class="progress">
+				<button id="add_class">Create a new class</button>
+				<div id="new_class">
+					<form>
+						<input class="text" placeholder="Type in the new class">
+					</form>
+				</div>
+			</div>
+		</section>
 		<br>
 		<form action="StartScreen.html">
 			<input type="submit" value="Go back">
 		</form>
+		<script src="GradeController.js"></script>
 	</body>
 </html>

@@ -5,3 +5,13 @@
 body {
 	background-color: #aec6cf;
 }
+
+.login-container{
+	display: flex;
+	flex-direction: column;
+	width: 20%;
+}
+
+.user-and-password{
+	display: flex;
+}

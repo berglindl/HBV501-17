@@ -8,100 +8,45 @@
     <br>
     <br>
 
-  
-
-  <style type="text/css">
-    td{padding:5px;}
-  </style>
-
-<SCRIPT language="javascript">
-
-
-		function addRow(tableID) {
-
-			var table = document.getElementById(tableID);
-
-			var rowCount = table.rows.length;
-			var row = table.insertRow(rowCount);
-
-			var colCount = table.rows[0].cells.length;
-
-			for(var i=0; i<colCount; i++) {
-
-				var newcell	= row.insertCell(i);
-
-				newcell.innerHTML = table.rows[0].cells[i].innerHTML;
-				//alert(newcell.childNodes);
-				switch(newcell.childNodes[0].type) {
-					case "text":
-							newcell.childNodes[0].value = "";
-							break;
-					case "checkbox":
-							newcell.childNodes[0].checked = false;
-							break;
-				}
-			}
-		}
-
-		function deleteRow(tableID) {
-			try {
-			var table = document.getElementById(tableID);
-			var rowCount = table.rows.length;
-
-			for(var i=0; i<rowCount; i++) {
-				var row = table.rows[i];
-				var chkbox = row.cells[0].childNodes[0];
-				if(null != chkbox && true == chkbox.checked) {
-					if(rowCount <= 1) {
-						alert("Cannot delete all the rows.");
-						break;
-					}
-					table.deleteRow(i);
-					rowCount--;
-					i--;
-				}
-
-
-			}
-			}catch(e) {
-				alert(e);
-			}
-		}
-
-	</SCRIPT>
-</HEAD>
-<BODY>
-
-	<INPUT type="button" value="Add Row" onclick="addRow('dataTable')" />
-
-	<INPUT type="button" value="Delete Row" onclick="deleteRow('dataTable')" /
-
-
-
-<div id="wrapper">
-<table align='center' border="1" id="dataTable" width="350px">
-<caption>Class Grades</caption>
-  
-	
-		<TR>
-			<TD><INPUT type="checkbox" name="chk"/></TD>
-			<TD><INPUT type="text" name="txt"/></TD>
-			<TD><INPUT type="text" name="txt"/></TD>
-			<TD>
-
-			
-			
-		</TR>
-	</TABLE>
+	<div>
+		<table id="gradeTable" border="1">
+			<tr>
+				<th>Assignment</th>
+				<th>Grade</th>
+				<th>Edit/Delete</th>
+  			</tr>
+  			<tr id="newRow1">
+  				<td id="newAssignment"></td>
+  				<td id="newGrade"></td>
+  				<td>
+  					<input type="button" id="editRow" value="Edit" onclick="editTheRow('1');">
+  					<input type="button" id="saveRow" value="Save" onclick="saveChanges('1');">
+  					<input type="button"value="Delete" onclick="deleteTheRow('1');">
+  				</td>
+  			</tr>
+  			<tr>
+  				<td>
+  					<input type="text" id="addNewAssignment">
+  				</td>
+  				<td>
+  					<input type="text" id="addNewGrade">
+  				</td>
+  				<td>
+  					<input type="button" value="Add new" onclick="addNewRow();">
+  				</td>
+  			</tr>
+		</table>
+	</div>
 	<br>
-<br>
-<form action="StartScreen.html">
-			<input type="submit" value="Go back">
-		</form>
-		<br>
-		<br>
-		<form action="LoginScreen.html">
-			<input type="submit" value="Log out">
-		</form>
+	<br>
+	<form action="StartScreen.html">
+		<input type="submit" value="Go back">
+	</form>
+	<br>
+	<br>
+	<form action="LoginScreen.html">
+		<input type="submit" value="Log out">
+	</form>
+	<script src="GradeController.js"></script>
 	</body>
 </html>

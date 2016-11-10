@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title= StudyBuddy
+  body
+    block content
+    div(class="logo-container")
+      h2(class="header-1") StudyBuddy
+    div
+      form(method="post", action="StartScreen.pug", (click)="login()")
+        div(class="login-container")
+          div(class="prettify-login-container")
+            label(class="user-and-password") Username:
+            input(type="text", name="username", placeholder="Enter username", required)
+            label(class="user-and-password") Password:
+            input(type="password", name="password", placeholder="Enter password", required)
+            br
+          input(type="submit", value="Login", name="submit", (click)="login()")

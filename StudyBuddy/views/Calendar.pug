@@ -1,0 +1,60 @@
+doctype html
+html
+  head
+    title= StudyBuddy
+    link(rel='stylesheet', href='/stylesheets/StudyBuddy.css')
+  body
+    block content
+    div(class="month")
+      ul
+        li(class="prev-month") <-
+        li(class="next-month") ->
+        li(class="this-month") November
+        li(class="this-yeah") 2016
+    ul(class="weekdays")
+      li Monday
+      li Tuesday
+      li Wednesday
+      li Thursday
+      li Friday
+      li Saturday
+      li Sunday
+    ul(class="days")
+      li(class="not-this-month") 31
+      li(class="this-month") 1
+      li(class="this-month") 2
+      li(class="this-month") 3
+      li(class="this-month") 4
+      li(class="this-month") 5
+      li(class="this-month") 6
+      li(class="this-month") 7
+      li(class="this-month") 8
+      li(class="this-month") 9
+      li(class="this-month") 10
+      li(class="this-month") 11
+      li(class="this-month") 12
+      li(class="this-month") 13
+      li(class="this-month") 14
+      li(class="this-month") 15
+      li(class="this-month") 16
+      li(class="this-month") 17
+      li(class="this-month") 18
+      li(class="this-month") 19
+      li(class="this-month") 20
+      li(class="this-month") 21
+      li(class="this-month") 22
+      li(class="this-month") 23
+      li(class="this-month") 24
+      li(class="this-month") 25
+      li(class="this-month") 26
+      li(class="this-month") 27
+      li(class="this-month") 28
+      li(class="this-month") 29
+      li(class="this-month") 30
+      li(class="not-this-month") 1
+      li(class="not-this-month") 2
+      li(class="not-this-month") 3
+      li(class="not-this-month") 4
+    br
+    form(method="post", action="/")
+      input(type="submit", action="/StartScreen.pug", value="Go back", name="startscreen")

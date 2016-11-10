@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title= StudyBuddy
+    link(rel='stylesheet', href='/stylesheets/StudyBuddy.css')
+  body
+    block content
+    div(class="logo-container")
+      h2(class="header-1") StudyBuddy
+    div(class="start-screen-container")
+      div(class="header-2-container")
+        h2(class="header-2") Welcome back!
+      form(method="post", action="/grades")
+        input(type="submit", action="/GradeOverview.pug", value="See grade progress", name="gradeprogress")
+      form(method="post", action="/calendar")
+        input(type="submit", action="/Calendar.pug", value="See calendar", name="calendar")
+      form(method="post", action="/")
+        input(type="submit", action="/LoginScreen.pug", value="Go back", name="login")

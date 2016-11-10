@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title= StudyBuddy
+    link(rel='stylesheet', href='/stylesheets/StudyBuddy.css')
+  body
+    block content
+    h1 Grade Progress
+    div
+      table(align="center", id="gradeTable", border="1")
+        tr
+          th Assignment
+          th Grade
+          th Edit/Delete
+        tr(id="newRow")
+          td(id="newAssignment") Assignment 1
+          td(id="newGrade") 10
+          td
+            input(type="button", id="editRow", name="editRow", value="Edit", (click)="editTheRow()")
+            input(type="button", id="saveRow", name="saveRow", value="Save", (click)="saveChanges()")
+            input(type="button", id="deleteRow", name="deleteRow", value="Delete", (click)="deleteTheRow()")
+        tr
+          td
+            input(type="text", id="addNewAssignment", name="addNewAssignment")
+          td
+            input(type="text", id="addNewGrade", name="addNewGrade")
+          td
+            input(type="button", value="Add new", (click)="addNewRow()")
+    form(method="post", action="/")
+      input(action="/StartScreen.pug", type="submit", value="Go back")

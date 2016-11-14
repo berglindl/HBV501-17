@@ -1,0 +1,13 @@
+TO DO LIST
+
+Setja upp gagnagrunn -> postgres
+Gagnagrunnurinn er 1 2 og 3, við getum lítið útfært hitt án gagnagrunnsins
+Þegar tenging við gagnagrunn er komið þá...
+Klára gradeoverview
+Klára calendar
+Búa til notes síðuna og útfæra
+Búa til user síðuna og útfæra
+Dúllast aðeins meira í kringum user t.d setja mynd og svona
+Klára cssið og láta þetta líta ágætlega út
+Fínpússa
+Tadah! Tilbúið 22. nov! 
